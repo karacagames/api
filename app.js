@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: false })); // APENAS DADOS SIMPLES
 app.use(express.json()); // JSON DE ENTRADA NO BODY
 
 app.use((req, res, next) => {
-    res.header('Acces-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Origin','*');
     res.header(
-        'Acces-Control-Allow-Header',
-        'Origin, X-Requested-With, Content-Type, Accept, Autorization'
+        'Access-Control-Allow-Header',
+        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     );
 
     if (req.method === 'OPTIONS') {
